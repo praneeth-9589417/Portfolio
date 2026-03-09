@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Zoro Z blade mark -->
+  <path d="M10 14 H54 L18 50 H54" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Subtle cross-guard detail on bottom stroke -->
+  <line x1="48" y1="44" x2="48" y2="56" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+</svg>
