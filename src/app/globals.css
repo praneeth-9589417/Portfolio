@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* Nano Banana Pro Core Palette */
+  --color-accent: #000000;
+  --color-zinc-950: #09090b;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: #f9fafb;
+    /* Off-white premium base */
+    --foreground: #09090b;
+    /* Zinc-950 text */
+  }
+
+  .dark {
+    --background: #09090b;
+    --foreground: #f4f4f5;
+    /* Zinc-100 */
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100dvh;
+    @apply selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black;
+  }
+
+  /* Liquid Glass Refraction Utility */
+  .liquid-glass {
+    @apply bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl border border-white/20 dark:border-white/5 shadow-[inset_0_1px_0_#ffffff33] dark:shadow-[inset_0_1px_0_#ffffff05];
+  }
+
+  /* Diffusion Shadow for Bento Grid Items */
+  .diffusion-shadow {
+    @apply shadow-[0_20px_40px_-15px_#0000000d] dark:shadow-[0_20px_40px_-15px_#00000066];
+  }
+}
+
+/* Base resets & utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
